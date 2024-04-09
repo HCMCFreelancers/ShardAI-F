@@ -1,3 +1,7 @@
+import AIGen from "@/components/collaborate/AI-Gen";
+import Contact from "@/components/collaborate/Contact";
+import Cooperate from "@/components/collaborate/Cooperate";
+import Collaborate from "@/components/collaborate/collaborate";
 import EmpowerEfficiency from "@/components/cpu-advantage/empower-efficiency";
 import EnhanceMining from "@/components/enhance-mining/enhance-mining";
 import Redefine from "@/components/redefine/redefine-efficiency";
@@ -11,6 +15,10 @@ export default function Home() {
       <StrategicGoal />
       <Redefine />
       <EmpowerEfficiency />
+      <Collaborate />
+      <AIGen />
+      <Cooperate />
+      <Contact />
     </main>
   );
 }
