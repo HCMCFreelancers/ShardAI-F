@@ -65,7 +65,17 @@ export default function StrategicGoal() {
           })}
         </div>
         {/* video */}
-        <div></div>
+        <video
+          width="600"
+          height="600"
+          autoPlay
+          loop
+          muted
+          className="mix-blend-plus-lighter"
+        >
+          <source src="/videos/strategic/sphere.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   );
