@@ -1,11 +1,18 @@
 import React from 'react'
 import ai from '@/images/enhance-mining/ai.mp4'
+import frame from '@/images/enhance-mining/frame.png'
 
 const EnhanceMining = () => {
   return (
-    <section className="pt-[120px] pb-[60px] mx-auto ">
-      <article className="py-[40px] max-w-[1219px] px-[32px] rounded-[62px] bg-blend-soft-light flex gap-[40px] bg-[radial-gradient(144.68%_116.2%_at_43.52%_0%,rgba(0,0,0,0.00)_0%,rgba(236,104,3,0.04)_63.82%,rgba(255,212,98,0.50)_100%)]">
-        <div className="min-w-[534px] relative h-[534px] border-[1px] border-[#8C6549] rounded-[32px] shadow-[0px_4px_40px_0px_#1B1204,0px_4px_40px_0px_rgba(45,45,45,0.25)_inset] overflow-hidden">
+    <section className="pt-[120px] pb-[60px] md:px-0 px-4 mx-auto ">
+      <article
+        style={{
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="py-[40px] max-w-[1219px] md:px-[32px] px-4 rounded-[62px] bg-blend-soft-light flex md:flex-row flex-col-reverse gap-[40px] md:bg-[url('/images/enhance-mining/frame.png')]  bg-[url('/images/enhance-mining/frameMb.png')]"
+      >
+        <div className="md:min-w-[534px] relative md:h-[534px] h-[364px] border-[1px] border-[#8C6549] rounded-[32px] shadow-[0px_4px_40px_0px_#1B1204,0px_4px_40px_0px_rgba(45,45,45,0.25)_inset] overflow-hidden">
           <video
             loop
             muted
@@ -22,7 +29,7 @@ const EnhanceMining = () => {
             <h1 className="silver-text text-[32px] leading-[41px] font-bold">
               Enhancing Mining Efficiency with AI
             </h1>
-            <p className="text-[rgba(255,255,255,0.66)] text-[24px] leading-[32px] tracking-[0.2px] ">
+            <p className="text-[rgba(255,255,255,0.66)] md:text-[24px] md:leading-[32px] text-[16px] leading-[24px] tracking-[0.2px] ">
               Discover how we utilize{" "}
               <span className="text-[#FFF]">Artificial Intelligence</span> to
               develop an advanced mining algorithm, optimizing hash power by
@@ -31,7 +38,7 @@ const EnhanceMining = () => {
               across L1 Blockchains in{" "}
               <span className="text-[#FFF]">real-time.</span>
             </p>
-            <button className="w-fit px-6 py-2 rounded-[99px] border border-[#2D2A2A]">
+            <button className="w-fit px-6 py-2 rounded-[99px] border border-[#2D2A2A] hover:opacity-85">
               <span className="text-[18px]">Explore Now</span>
             </button>
           </div>
