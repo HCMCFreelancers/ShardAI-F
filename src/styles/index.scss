@@ -1,0 +1,25 @@
+.gradientSilver {
+  background: var(
+    --Gradient-Silver,
+    linear-gradient(91deg, #fff -1.2%, #b0b1b4 99.77%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.borderLineGradient {
+  border-radius: 16px;
+  border: 1px solid #f1cf8d;
+  background: radial-gradient(
+      116.22% 101.92% at 4.14% 0%,
+      rgba(241, 179, 58, 0.35) 0%,
+      rgba(232, 121, 40, 0.25) 12.9%,
+      rgba(68, 39, 18, 0) 50.4%
+    ),
+    radial-gradient(
+      313.04% 96.97% at 98.12% 99.31%,
+      rgba(241, 135, 58, 0.35) 0%,
+      rgba(210, 105, 30, 0.25) 15.4%,
+      rgba(68, 39, 18, 0) 68.9%
+    );
+}
