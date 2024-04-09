@@ -47,13 +47,13 @@ const Cooperate = () => {
     },
   ];
   return (
-    <div className="w-full py-[32px] flex justify-center">
-      <div className="w-full max-w-[1440px] flex justify-center">
+    <div className="w-full py-[32px] flex justify-center overflow-hidden">
+      <div className="w-[1440px] flex justify-center">
         <Swiper spaceBetween={24} slidesPerView={7.8} loop autoplay>
           {menu.map((item, index) => {
             return (
               <SwiperSlide>
-                <div className="rounded-[16px] p-[24px] flex justify-center borderLineGradient h-[72px]">
+                <div className="rounded-[16px] md:p-[24px] p-[8px] flex justify-center borderLineGradient h-[40px] md:h-[72px]">
                   <Image src={item.icon} alt="icon" height={24} />
                 </div>
               </SwiperSlide>
