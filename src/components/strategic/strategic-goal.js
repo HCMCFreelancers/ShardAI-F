@@ -26,41 +26,48 @@ const STRATEGICS = [
 
 export default function StrategicGoal() {
   return (
-    <div className="md:max-w-[1440px] w-full md:px-40 md:py-[60px] flex flex-col items-center">
+    <div className="md:max-w-[1440px] max-w-[414px] w-full px-4 py-6 md:px-40 md:py-[60px] flex flex-col items-center">
       {/* title */}
       <div className="px-4 py-2 rounded-[40px] border border-[rgba(255,255,255,0.75)] bg-[rgba(255,250,209,0.04)] shadow-[0px_0px_12px_0px_#FFC872_inset]">
         <p className="text-[18px] leading-[24px] bg-[linear-gradient(90deg,#FFFCF5_-0.05%,#E5B865_37.73%,#F27969_82.63%)] bg-clip-text text-transparent">
           AI Gen is born to
         </p>
       </div>
-      <div className="md:mt-4 text-[48px] leading-[52px] font-medium tracking-[-1px] text-white">
+      <div className="mt-4 text-3xl text-center md:text-[48px] md:leading-[52px] font-medium tracking-[-1px] text-white">
         Strategic Goals for Success
       </div>
       {/* content */}
-      <div className="md:mt-[60px] w-full flex items-center">
+      <div className="md:mt-[60px] mt-10 w-full flex md:flex-row flex-col items-center">
         {/* text content */}
-        <div className="flex flex-col md:gap-6 w-full md:max-w-[488px]">
+        <div className="flex flex-col md:gap-6 gap-4 w-full md:max-w-[488px]">
           {STRATEGICS.map((item, index) => {
             return (
-              <div
-                key={index}
-                className="md:p-4 flex flex-col w-full gap-4 border border-[rgba(255,255,255,0.10)] 
+              <>
+                <div
+                  key={index}
+                  className="p-4 flex flex-col w-full gap-4 border border-[rgba(255,255,255,0.10)] 
                 rounded-lg bg-[linear-gradient(180deg,rgba(11,12,16,0.40)_0%,rgba(19,22,26,0.40)_100%)] 
                 backdrop-blur-md shadow-[0px_2px_23.2px_0px_rgba(21,15,94,0.04)]"
-              >
-                {/* icon */}
-                <div>
-                  <Image src={item.iconUrl} alt="icon" width={40} height={40} />
+                >
+                  {/* icon */}
+                  <div>
+                    <Image
+                      src={item.iconUrl}
+                      alt="icon"
+                      width={40}
+                      height={40}
+                    />
+                  </div>
+                  {/* title */}
+                  <div className="text-[18px] leading-[28px] font-medium text-white">
+                    {item.title}
+                  </div>
+                  {/* content */}
+                  <div className="font-light text-[14px] leading-[22px] tracking-[0.2px] text-[rgba(255,255,255,0.66)] ">
+                    {item.content}
+                  </div>
                 </div>
-                {/* title */}
-                <div className="text-[18px] leading-[28px] font-medium text-white">
-                  {item.title}
-                </div>
-                {/* content */}
-                <div className="font-light text-[14px] leading-[22px] tracking-[0.2px] text-[rgba(255,255,255,0.66)] ">
-                  {item.content}
-                </div>
-              </div>
+              </>
             );
           })}
         </div>
