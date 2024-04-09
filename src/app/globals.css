@@ -25,3 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.silver-text{
+  background: var(--Gradient-Silver, linear-gradient(91deg, #FFF -1.2%, #B0B1B4 99.77%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
