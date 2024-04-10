@@ -1,8 +1,9 @@
 "use client";
 import { cn } from "@/libs/utils";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "./logo";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -18,6 +19,14 @@ const Header = () => {
     },
   ];
 
+  const { width } = useWindowDimensions();
+
+  useEffect(() => {
+    if (width > 768) {
+      setIsMenuOpen(false);
+    }
+  }, [width]);
+
   return (
     <>
       {/* {isMenuOpen && <div className="h-[80px]"></div>} */}
@@ -28,9 +37,7 @@ const Header = () => {
             "bg-[#000] w-full h-full fixed top-0 left-0 z-[1000] items-start flex flex-col gap-0 justify-start px-4"
         )}
       >
-        <div
-          className={cn("flex items-center justify-between w-full h-[5px]")}
-        >
+        <div className={cn("flex items-center justify-between w-full h-[5px]")}>
           <div className="flex items-center gap-4">
             <Logo />
             <h1>Shard AI</h1>
@@ -88,16 +95,37 @@ const Header = () => {
                 key={index}
                 href={item.link}
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-3 border-b border-[#202020] flex items-center justify-start w-full"
+                className="px-4 py-3 border-b border-[#202020] flex items-center justify-between w-full hover:opacity-75 transition-all"
               >
-                <p className="text-[#FFFFFF] text-[20px] leading-[28px] font-medium hover:opacity-75 transition-all">
+                <p className="text-[#FFFFFF] text-[20px] leading-[28px] font-medium ">
                   {item.name}
                 </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                >
+                  <path
+                    d="M5.8335 14.7729L14.1668 6.43954"
+                    stroke="#9CA3AF"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M5.8335 6.43954H14.1668V14.7729"
+                    stroke="#9CA3AF"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </Link>
             ))}
             <button
-            onClick={() => setIsMenuOpen(false)}
-            className="px-6 mx-4 w-fit py-3 rounded-[60px] bg-[radial-gradient(302.61%_113.38%_at_-3%_21.87%,#FFF7E1_0%,#FFD361_14.73%,#EC6803_100%)] hover:opacity-80 transition-all">
+              onClick={() => setIsMenuOpen(false)}
+              className="px-6 mx-4 w-fit py-3 rounded-[60px] bg-[radial-gradient(302.61%_113.38%_at_-3%_21.87%,#FFF7E1_0%,#FFD361_14.73%,#EC6803_100%)] hover:opacity-80 transition-all"
+            >
               <span className="text-[14px] whitespace-nowrap leading-[20px] text-[#000000] tracking-[-0.05px] font-medium ">
                 Launch Dapp
               </span>
