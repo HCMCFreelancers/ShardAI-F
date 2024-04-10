@@ -1,3 +1,6 @@
+"use client";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import logo from "@/images/contact/logo.png";
 import twitter from "@/images/contact/twitter.png";
 import tiktok from "@/images/contact/tiktok.png";
@@ -24,10 +27,20 @@ const Contact = () => {
       id: 4,
     },
   ];
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
   return (
     <div className="w-full flex justify-center">
       <div className="w-full max-w-[1440px] md:px-[80px] md:pt-[40px] pt-[14px] px-[16px] pb-[24px] flex justify-center">
-        <div className="w-full max-w-[509px] gap-[24px] flex flex-col items-center">
+        <motion.div
+          ref={ref1}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : 50 }}
+          transition={{ duration: 0.5 }}
+          className="w-full max-w-[509px] gap-[24px] flex flex-col items-center"
+        >
           <div className="w-[60px] h-[60px]">
             <Image src={logo} alt="logo" objectFit="cover" />
           </div>
@@ -55,7 +68,7 @@ const Contact = () => {
           <div className="text-[#676D79] md:text-[16px] text-[14px] font-normal leading-[20px] md:leading-[24px] py-[16px]">
             © AI Gen 2024, All Rights Reserved.
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
