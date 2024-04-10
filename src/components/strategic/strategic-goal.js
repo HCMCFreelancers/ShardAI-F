@@ -26,23 +26,23 @@ const STRATEGICS = [
 
 export default function StrategicGoal() {
   return (
-    <div className="md:max-w-[1440px] max-w-[414px] w-full px-4 py-6 md:px-40 md:py-[60px] flex flex-col items-center">
+    <div className="md:max-w-[1440px] max-w-[414px] w-full px-4 py-[60px] md:px-40 flex flex-col items-center">
       {/* title */}
       <div className="px-4 py-2 rounded-[40px] border border-[rgba(255,255,255,0.75)] bg-[rgba(255,250,209,0.04)] shadow-[0px_0px_12px_0px_#FFC872_inset]">
-        <p className="text-[18px] leading-[24px] bg-[linear-gradient(90deg,#FFFCF5_-0.05%,#E5B865_37.73%,#F27969_82.63%)] bg-clip-text text-transparent">
+        <p className="md:text-[18px] text-[12px] leading-[24px] bg-[linear-gradient(90deg,#FFFCF5_-0.05%,#E5B865_37.73%,#F27969_82.63%)] bg-clip-text text-transparent">
           AI Gen is born to
         </p>
       </div>
-      <div className="mt-4 text-3xl text-center md:text-[48px] md:leading-[52px] font-medium tracking-[-1px] text-white">
+      <div className="mt-4 text-[32px] leading-[36px] text-center md:text-[48px] md:leading-[52px] font-medium tracking-[-1px] text-white">
         Strategic Goals for Success
       </div>
       {/* content */}
-      <div className="md:mt-[60px] mt-10 w-full flex md:flex-row flex-col items-center">
+      <div className="mt-[60px]  w-full flex md:flex-row flex-col items-center">
         {/* text content */}
         <div className="flex flex-col md:gap-6 gap-4 w-full md:max-w-[488px]">
           {STRATEGICS.map((item, index) => {
             return (
-              <>
+              <div className="w-full">
                 <div
                   key={index}
                   className="p-4 flex flex-col w-full gap-4 border border-[rgba(255,255,255,0.10)] 
@@ -67,7 +67,8 @@ export default function StrategicGoal() {
                     {item.content}
                   </div>
                 </div>
-              </>
+                <div className="w-full h-[1px] bg-[linear-gradient(90deg,#303133_6.14%,#EEE_50.6%,#303133_93.42%)]"></div>
+              </div>
             );
           })}
         </div>
@@ -78,7 +79,7 @@ export default function StrategicGoal() {
           autoPlay
           loop
           muted
-          className="mix-blend-plus-lighter"
+          className="mix-blend-plus-lighter mt-8 md:mt-0"
         >
           <source src="/videos/strategic/sphere.webm" type="video/webm" />
           Your browser does not support the video tag.
