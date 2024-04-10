@@ -15,6 +15,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -26,8 +29,18 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.silver-text{
-  background: var(--Gradient-Silver, linear-gradient(91deg, #FFF -1.2%, #B0B1B4 99.77%));
+.silver-text {
+  background: var(
+    --Gradient-Silver,
+    linear-gradient(91deg, #fff -1.2%, #b0b1b4 99.77%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.golden-text {
+  background: radial-gradient(301.89% 107.64% at -2.8% 42.95%, #FFF4D6 0%, #FFD361 35.05%, #EC6803 100%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
