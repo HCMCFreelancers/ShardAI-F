@@ -14,7 +14,7 @@ export default function Home() {
       style={{
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full flex flex-col items-center bg-cover md:bg-main bg-mobile"
+      className="w-full flex flex-col items-center bg-cover md:bg-main bg-mobile font-helvetica"
     >
       <Hero />
       <EnhanceMining />

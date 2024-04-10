@@ -1,10 +1,23 @@
+"use client";
 import React from 'react'
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 
 const EnhanceMining = () => {
+
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
+
   return (
     <section className="pt-[120px] pb-[60px] md:px-0 px-4 mx-auto ">
-      <article
+      <motion.article
+        ref={ref1}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : 50 }}
+        transition={{ duration: 0.5 }}
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -20,7 +33,7 @@ const EnhanceMining = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src='/videos/strategic/ai.mp4' type="video/mp4" />
+            <source src="/videos/strategic/ai.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="flex flex-col gap-10 justify-between">
@@ -52,7 +65,7 @@ const EnhanceMining = () => {
             </p>
           </div>
         </div>
-      </article>
+      </motion.article>
     </section>
   );
 }

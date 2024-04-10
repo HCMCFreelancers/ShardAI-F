@@ -45,7 +45,7 @@ const Contact = () => {
               return (
                 <div
                   key={item.id}
-                  className="md:w-[56px] md:h-[56px] w-[40px] h-[40px] rounded-[40px] border-[1px] border-solid border-[#E7E7E7] p-[4px] md:p-[8px]"
+                  className="md:w-[56px] md:h-[56px] w-[40px] h-[40px] rounded-[40px] flex justify-center items-center border-[1px] border-solid border-[#E7E7E7] p-[4px] md:p-[8px]"
                 >
                   <Image src={item.icon} alt="icon" objectFit="cover" />
                 </div>

@@ -1,12 +1,31 @@
+"use client";
 import hero from "@/images/hero/dapp.png";
 import Image from "next/image";
 import { ContainerScroll } from "../ui/container-scroll-animation";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
+
   return (
     <section className="relative w-full">
       <div className="md:py-[60px] py-[20px] mx-auto max-w-[1440px] flex flex-col gap-10">
-        <div className="flex flex-col items-center md:gap-8 gap-6">
+        <motion.div
+          ref={ref1}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : 50 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center md:gap-8 gap-6"
+        >
           <div className="flex flex-col gap-4">
             <div className="flex flex-col items-center">
               <h1 className="golden-text md:text-[64px] md:leading-[70px] text-[32px] leading-normal tracking-[-0.3px] font-bold">
@@ -34,10 +53,17 @@ const Hero = () => {
               Launch Dapp
             </span>
           </button>
-        </div>
-        <ContainerScroll>
-          <Image src={hero} alt="hero" layout="fill" objectFit="cover" />
-        </ContainerScroll>
+        </motion.div>
+        <motion.div
+          ref={ref2}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: inView2 ? 1 : 0, y: inView2 ? 0 : 50 }}
+          transition={{ duration: 0.5 }}
+        >
+          <ContainerScroll>
+            <Image src={hero} alt="hero" layout="fill" objectFit="cover" />
+          </ContainerScroll>
+        </motion.div>
       </div>
       <div className="absolute bottom-0 w-full md:h-[1011px] h-[500px] bg-[linear-gradient(180deg,rgba(1,1,1,0.00)_0%,#010101_98.93%)] z-[10000]"></div>
     </section>

@@ -32,7 +32,7 @@ const Header = () => {
       {/* {isMenuOpen && <div className="h-[80px]"></div>} */}
       <header
         className={cn(
-          "md:px-[80px] md:py-0 py-[32px] px-4 mx-auto max-w-[1440px] h-[70px] flex items-center justify-between transition-all duration-500",
+          "md:px-[80px] md:py-0 py-[32px] px-4 mx-auto max-w-[1440px] h-[70px] flex items-center justify-between transition-all duration-500 font-helvetica",
           isMenuOpen &&
             "bg-[#000] w-full h-full fixed top-0 left-0 z-[1000] items-start flex flex-col gap-0 justify-start px-4"
         )}
@@ -40,7 +40,9 @@ const Header = () => {
         <div className={cn("flex items-center justify-between w-full h-[5px]")}>
           <div className="flex items-center gap-4">
             <Logo />
-            <h1>Shard AI</h1>
+            <h1 className="text-[28px] leading-[32px] font-medium">
+              Shard AI
+            </h1>
           </div>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -126,7 +128,7 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
               className="px-6 mx-4 w-fit py-3 rounded-[60px] bg-[radial-gradient(302.61%_113.38%_at_-3%_21.87%,#FFF7E1_0%,#FFD361_14.73%,#EC6803_100%)] hover:opacity-80 transition-all"
             >
-              <span className="text-[14px] whitespace-nowrap leading-[20px] text-[#000000] tracking-[-0.05px] font-medium ">
+              <span className="text-[14px] whitespace-nowrap leading-[20px] text-[#000000] tracking-[-0.05px] font-medium">
                 Launch Dapp
               </span>
             </button>
