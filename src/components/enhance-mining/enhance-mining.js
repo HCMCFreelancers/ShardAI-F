@@ -1,6 +1,5 @@
 import React from 'react'
-import ai from '@/images/enhance-mining/ai.mp4'
-import frame from '@/images/enhance-mining/frame.png'
+
 
 const EnhanceMining = () => {
   return (
