@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
 import hand from "@/images/strategic/coin-hand.svg";
 import global from "@/images/strategic/global.svg";
 import server from "@/images/strategic/server.svg";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const STRATEGICS = [
   {
@@ -41,34 +44,44 @@ export default function StrategicGoal() {
         {/* text content */}
         <div className="flex flex-col md:gap-6 gap-4 w-full md:max-w-[488px]">
           {STRATEGICS.map((item, index) => {
+            const [ref, inView] = useInView({
+              triggerOnce: true,
+              rootMargin: "-200px 0px",
+            });
             return (
-              <div className="w-full">
-                <div
-                  key={index}
-                  className="p-4 flex flex-col w-full gap-4 border border-[rgba(255,255,255,0.10)] 
-                rounded-lg bg-[linear-gradient(180deg,rgba(11,12,16,0.40)_0%,rgba(19,22,26,0.40)_100%)] 
-                backdrop-blur-md shadow-[0px_2px_23.2px_0px_rgba(21,15,94,0.04)]"
-                >
-                  {/* icon */}
-                  <div>
-                    <Image
-                      src={item.iconUrl}
-                      alt="icon"
-                      width={40}
-                      height={40}
-                    />
+              <motion.div
+                ref={ref}
+                animate={{ x: inView ? 0 : "-100%", opacity: inView ? 1 : 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="w-full flex flex-col items-center transform transition duration-500 ease-in-out hover:scale-105">
+                  <div
+                    key={index}
+                    className="p-4 flex flex-col w-full gap-4 border border-[rgba(255,255,255,0.10)] 
+      rounded-lg bg-[linear-gradient(180deg,rgba(11,12,16,0.40)_0%,rgba(19,22,26,0.40)_100%)] 
+      backdrop-blur-md shadow-[0px_2px_23.2px_0px_rgba(21,15,94,0.04)] "
+                  >
+                    {/* icon */}
+                    <div>
+                      <Image
+                        src={item.iconUrl}
+                        alt="icon"
+                        width={40}
+                        height={40}
+                      />
+                    </div>
+                    {/* title */}
+                    <div className="text-[18px] leading-[28px] font-medium text-white">
+                      {item.title}
+                    </div>
+                    {/* content */}
+                    <div className="font-light text-[14px] leading-[22px] tracking-[0.2px] text-[rgba(255,255,255,0.66)] ">
+                      {item.content}
+                    </div>
                   </div>
-                  {/* title */}
-                  <div className="text-[18px] leading-[28px] font-medium text-white">
-                    {item.title}
-                  </div>
-                  {/* content */}
-                  <div className="font-light text-[14px] leading-[22px] tracking-[0.2px] text-[rgba(255,255,255,0.66)] ">
-                    {item.content}
-                  </div>
+                  <div className="-mt-[0.25px] w-[calc(100%-10px)] rounded-lg h-[1px] bg-[linear-gradient(90deg,#303133_6.14%,#EEE_50.6%,#303133_93.42%)]"></div>
                 </div>
-                <div className="w-full h-[1px] bg-[linear-gradient(90deg,#303133_6.14%,#EEE_50.6%,#303133_93.42%)]"></div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
