@@ -39,7 +39,7 @@ const Hero = () => {
           <Image src={hero} alt="hero" layout="fill" objectFit="cover" />
         </ContainerScroll>
       </div>
-      <div className="absolute bottom-0 w-full md:h-[1011px] h-[500px] bg-[linear-gradient(180deg,rgba(1,1,1,0.00)_0%,#010101_96.93%)] z-[10000]"></div>
+      <div className="absolute bottom-0 w-full md:h-[1011px] h-[500px] bg-[linear-gradient(180deg,rgba(1,1,1,0.00)_0%,#010101_98.93%)] z-[10000]"></div>
     </section>
   );
 }
