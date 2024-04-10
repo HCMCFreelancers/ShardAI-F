@@ -28,17 +28,46 @@ const STRATEGICS = [
 ];
 
 export default function StrategicGoal() {
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
+  const [refVid, inViewVid] = useInView({
+    triggerOnce: true,
+    rootMargin: "0px 0px -100px 0px",
+  });
   return (
     <div className="md:max-w-[1440px] max-w-[414px] w-full px-4 py-[60px] md:px-40 flex flex-col items-center">
       {/* title */}
-      <div className="px-4 py-2 rounded-[40px] border border-[rgba(255,255,255,0.75)] bg-[rgba(255,250,209,0.04)] shadow-[0px_0px_12px_0px_#FFC872_inset]">
+      {/* <div className="px-4 py-2 rounded-[40px] border border-[rgba(255,255,255,0.75)] bg-[rgba(255,250,209,0.04)] shadow-[0px_0px_12px_0px_#FFC872_inset]">
         <p className="md:text-[18px] text-[12px] leading-[24px] bg-[linear-gradient(90deg,#FFFCF5_-0.05%,#E5B865_37.73%,#F27969_82.63%)] bg-clip-text text-transparent">
           AI Gen is born to
         </p>
-      </div>
-      <div className="mt-4 text-[32px] leading-[36px] text-center md:text-[48px] md:leading-[52px] font-medium tracking-[-1px] text-white">
+      </div> */}
+      <motion.div
+        className="px-4 py-2 rounded-[40px] border border-[rgba(255,255,255,0.75)] bg-[rgba(255,250,209,0.04)] shadow-[0px_0px_12px_0px_#FFC872_inset]"
+        ref={ref1}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : 50 }}
+        transition={{ duration: 0.5 }}
+      >
+        <p className="md:text-[18px] text-[12px] leading-[24px] bg-[linear-gradient(90deg,#FFFCF5_-0.05%,#E5B865_37.73%,#F27969_82.63%)] bg-clip-text text-transparent">
+          AI Gen is born to
+        </p>
+      </motion.div>
+      <motion.div
+        ref={ref2}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: inView2 ? 1 : 0, y: inView2 ? 0 : 50 }}
+        transition={{ duration: 0.5 }}
+        className="mt-4 text-[32px] leading-[36px] text-center md:text-[48px] md:leading-[52px] font-medium tracking-[-1px] text-white"
+      >
         Strategic Goals for Success
-      </div>
+      </motion.div>
       {/* content */}
       <div className="mt-[60px]  w-full flex md:flex-row flex-col items-center">
         {/* text content */}
@@ -46,7 +75,7 @@ export default function StrategicGoal() {
           {STRATEGICS.map((item, index) => {
             const [ref, inView] = useInView({
               triggerOnce: true,
-              rootMargin: "-200px 0px",
+              rootMargin: "-170px 0px",
             });
             return (
               <motion.div
@@ -86,17 +115,21 @@ export default function StrategicGoal() {
           })}
         </div>
         {/* video */}
-        <video
+        <motion.video
           width="600"
           height="600"
           autoPlay
           loop
           muted
           className="mix-blend-plus-lighter mt-8 md:mt-0"
+          ref={refVid}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: inViewVid ? 1 : 0 }}
+          transition={{ duration: 0.5 }}
         >
           <source src="/videos/strategic/sphere.webm" type="video/webm" />
           Your browser does not support the video tag.
-        </video>
+        </motion.video>
       </div>
     </div>
   );
