@@ -125,7 +125,7 @@ export default function StrategicGoal() {
           ref={refVid}
           initial={{ opacity: 0 }}
           animate={{ opacity: inViewVid ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1.0 }}
         >
           <source src="/videos/strategic/sphere.webm" type="video/webm" />
           Your browser does not support the video tag.
