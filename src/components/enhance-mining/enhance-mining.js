@@ -20,7 +20,7 @@ const EnhanceMining = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src='/images/enhance-mining/ai.mp4' type="video/mp4" />
+            <source src='/videos/strategic/ai.mp4' type="video/mp4" />
           </video>
         </div>
         <div className="flex flex-col gap-10 justify-between">

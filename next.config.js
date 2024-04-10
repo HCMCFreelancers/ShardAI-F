@@ -1,16 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack(config, { isServer }) {
-    config.module.rules.push({
-      test: /\.(webm|mp4)$/,
-      use: [
-        {
-          loader: "file-loader",
-        },
-      ],
-    });
-    return config;
-  },
+  webpack: (config) => {
+    config.externals.push('pino-pretty', 'lokijs', 'encoding')
+    return config
+  }
 };
 
 module.exports = nextConfig
