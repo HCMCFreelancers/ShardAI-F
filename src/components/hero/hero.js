@@ -48,7 +48,7 @@ const Hero = () => {
               <span className="text-[#FFF]">Crypto mining</span>.
             </p>
           </div>
-          <button className="md:px-8 md:py-4 py-2 px-6 w-fit bg-white rounded-[45px] shadow-[0px_4px_24px_0px_rgba(23,21,19,0.25)] hover:opacity-80 transition-all">
+          <button className="md:px-8 md:py-4 relative z-[200] hover:scale-105 py-2 px-6 w-fit bg-white rounded-[45px] shadow-[0px_4px_24px_0px_rgba(23,21,19,0.25)] hover:opacity-80 transition-all">
             <span className="text-[#1E1E1E] md:text-[16px] text-[14px] leading-[20px] tracking-[-0.05px] font-medium">
               Launch Dapp
             </span>
@@ -65,7 +65,7 @@ const Hero = () => {
           </ContainerScroll>
         </motion.div>
       </div>
-      <div className="absolute bottom-0 w-full md:h-[1011px] h-[500px] bg-[linear-gradient(180deg,rgba(1,1,1,0.00)_0%,#010101_98.93%)] z-[10000]"></div>
+      <div className="absolute bottom-0 w-full md:h-[1011px] h-[500px] bg-[linear-gradient(180deg,rgba(1,1,1,0.00)_0%,#010101_98.93%)] z-[100]"></div>
     </section>
   );
 }

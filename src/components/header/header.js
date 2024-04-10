@@ -19,13 +19,15 @@ const Header = () => {
     },
   ];
 
-  const { width } = useWindowDimensions();
+  const { innerWidth } = useWindowDimensions();
+
+
 
   useEffect(() => {
-    if (width > 768) {
+    if (innerWidth > 768) {
       setIsMenuOpen(false);
     }
-  }, [width]);
+  }, [innerWidth]);
 
   return (
     <>
