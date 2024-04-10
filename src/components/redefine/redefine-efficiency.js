@@ -21,6 +21,10 @@ export default function Redefine() {
     triggerOnce: true,
     rootMargin: "0px 0px -100px 0px",
   });
+  const [refVid2, inViewVid2] = useInView({
+    triggerOnce: true,
+    rootMargin: "0px 0px -100px 0px",
+  });
   return (
     <div className="md:max-w-[1440px] max-w-[414px] w-full md:px-40 py-[60px] px-4 flex md:flex-row flex-col md:items-start items-center md:gap-[60px] h-[974px] md:h-auto">
       {/* image desktop view */}
@@ -92,7 +96,13 @@ export default function Redefine() {
         </motion.div>
       </div>
       {/* image reponsive mobile view */}
-      <div className="md:w-[530px] md:h-[605px] rounded-[24px] block md:hidden">
+      <motion.div
+        ref={refVid2}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: inViewVid2 ? 1 : 0 }}
+        transition={{ duration: 1.0 }}
+        className="md:w-[530px] md:h-[605px] rounded-[24px] block md:hidden"
+      >
         <Image
           src={aicpu}
           alt="aicpu"
@@ -100,7 +110,7 @@ export default function Redefine() {
           height={605}
           className="rounded-[24px]"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
