@@ -34,7 +34,7 @@ const Header = () => {
       {/* {isMenuOpen && <div className="h-[80px]"></div>} */}
       <header
         className={cn(
-          "md:px-[80px] md:py-0 py-[32px] px-4 mx-auto max-w-[1440px] h-[70px] flex items-center justify-between transition-all duration-500 font-helvetica",
+          "md:px-[80px] md:py-0 py-[32px] px-4 mx-auto max-w-[1440px] h-[70px] flex items-center justify-between transition-all duration-500 font-helvetica bg-[#000]",
           isMenuOpen &&
             "bg-[#000] w-full h-full fixed top-0 left-0 z-[1000] items-start flex flex-col gap-0 justify-start px-4"
         )}
