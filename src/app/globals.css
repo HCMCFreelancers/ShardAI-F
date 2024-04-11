@@ -33,7 +33,7 @@ html{
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: #000;
   background: linear-gradient(
       to bottom,
       transparent,

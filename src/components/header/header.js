@@ -42,7 +42,7 @@ const Header = () => {
         <div className={cn("flex items-center justify-between w-full h-[5px]")}>
           <div className="flex items-center gap-4">
             <Logo />
-            <h1 className="text-[28px] leading-[32px] font-medium">
+            <h1 className="text-[28px] leading-[32px] font-medium text-white">
               Shard AI
             </h1>
           </div>
