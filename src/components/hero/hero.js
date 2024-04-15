@@ -29,23 +29,19 @@ const Hero = () => {
           <div className="flex flex-col gap-4">
             <div className="flex flex-col items-center">
               <h1 className="golden-text md:text-[64px] md:leading-[70px] text-[32px] leading-normal tracking-[-0.3px] font-bold">
-                AI-Powered{" "}
+                The Proof of Work{" "}
               </h1>
               <h1 className="silver-text md:text-[64px] leading-normal text-[32px] tracking-[-0.3px] font-bold">
-                Mining Excellence
+                Cryptocurrency Powered by AI
               </h1>
             </div>
             <p className="md:text-[18px] text-center md:leading-[24px] text-[14px] leading-[20px] tracking-[0.2px] text-[rgba(255,255,255,0.66)]">
-              With deep expertise in <span className="text-[#FFF]">Crypto</span>{" "}
-              and <span className="text-[#FFF]">Web3</span>, AI Gen has
-              <br className="md:hidden flex" />
-              established the
-              <br className="md:flex hidden" />
-              <span className="text-[#FFF]"> infrastructure</span>,{" "}
-              <span className="text-[#FFF]">partnerships</span>, and
-              <span className="text-[#FFF]">distribution</span>{" "}
-              <br className="md:hidden flex" /> network for successful{" "}
-              <span className="text-[#FFF]">Crypto mining</span>.
+              Harnessing the power of artificial intelligence,{" "}
+              <span className="text-[#FFF]">Shard AI </span>
+              revolutionizes <br /> the cryptocurrency mining landscape by using
+              AI
+              <br /> to optimize mining operations for maximum efficiency and
+              profitability.
             </p>
           </div>
           <button className="md:px-8 md:py-4 relative z-[200] hover:scale-105 py-2 px-6 w-fit bg-white rounded-[45px] shadow-[0px_4px_24px_0px_rgba(23,21,19,0.25)] hover:opacity-80 transition-all">
