@@ -15,15 +15,15 @@ const STRATEGICS = [
   },
   {
     iconUrl: server.src,
-    title: "Expand Our Services",
+    title: "Expanding Infrastructure",
     content:
-      "Bolster operational capabilities by expanding our mining facility, ensuring better efficiency, and introducing innovative services such as Hash & Node rental.",
+      "Scaling GPU and TPU infrastructure boosts computational power, accelerates tasks, enhances performance, facilitates innovation, and empowers diverse AI applications.",
   },
   {
     iconUrl: global.src,
-    title: "Establish Global Leadership",
+    title: "Building an ecosystem around $SHARD tokens",
     content:
-      "Cement AI Gen's position as a trailblazer in the industry, setting standards for sustainable and efficient mining practices worldwide.",
+      "Developing a staking application and Shard Chain  with the $SHARD as the native token. Users can stake $SHARD for interest, hold shard for yield, pay gas fees, and utilize other ecosystem products.",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function StrategicGoal() {
         transition={{ duration: 0.5 }}
       >
         <p className="md:text-[18px] text-[12px] leading-[24px] bg-[linear-gradient(90deg,#FFFCF5_-0.05%,#E5B865_37.73%,#F27969_82.63%)] bg-clip-text text-transparent">
-          AI Gen is born to
+          Objectives of Shard AI
         </p>
       </motion.div>
       <motion.div

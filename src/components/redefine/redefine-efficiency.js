@@ -64,7 +64,7 @@ export default function Redefine() {
           transition={{ duration: 0.5 }}
           className="mt-4 md:text-[48px] text-[32px] leading-[36px] text-start text-3xl md:leading-[52px] font-medium tracking-[-1px] text-white"
         >
-          Overcoming Traditional Challenges
+          Optimize Mining Rewards using TPU cores
         </motion.div>
         {/* content */}
         <motion.div
