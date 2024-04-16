@@ -75,17 +75,18 @@ export default function Redefine() {
           className="md:mt-[40px] mt-4 w-full flex-col flex md:gap-6 gap-4 items-start"
         >
           <p className="md:text-[16px] md:leading-[22px] text-sm font-light text-[rgba(255,255,255,0.66)] text-start">
-            Traditional mining practices often limit operations to one coin for
-            extended periods, missing out on short-term opportunities.{" "}
-            <span className="text-white">Manual adjustments </span>
-            for optimal mining are <span className="text-white">complex</span> ,
-            involving frequent changes in clients, pools, and GPU settings.
+            GPUs, initially designed for graphics rendering, have evolved into
+            versatile processors capable of handling AI tasks due to their
+            parallel processing strengths. On the other hand, TPUs, developed by
+            Google, are specialized for AI computations, offering optimized
+            performance for tasks like machine learning.
           </p>
           <p className="md:text-[16px] md:leading-[22px] text-sm font-light text-[rgba(255,255,255,0.66)]  text-start">
-            By focusing solely on{" "}
-            <span className="text-white">long-term profitability</span>, miners
-            overlook short-term gains that can be twice as lucrative, even for
-            brief periods.
+            TPUs are designed to be more energy-efficient than GPUs, with a
+            focus on reducing the power consumption per operation. TPUs use
+            two-dimensional multiply units that help in matrix multiplication
+            faster compared to the one-dimensional multiply units in CPUs and
+            GPUs.
           </p>
           {/* <button className="rounded-[52px] bg-[radial-gradient(302.61%_113.38%_at_-3%_21.87%,#FFF7E1_0%,#FFD361_14.73%,#EC6803_100%)] h-12 px-8 py-1.5 text-[#000] text-[18px] font-medium -tracking-[0.54px]">
             Launch Dapp
