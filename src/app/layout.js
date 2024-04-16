@@ -3,9 +3,16 @@ import "../styles/index.scss";
 import Header from "@/components/header/header";
 
 export const metadata = {
+  metadataBase: new URL("https://ai-gen-ten.vercel.app/"),
   title: "Shard AI",
   description:
-    "With deep expertise in Crypto and Web3, AI Gen has established the infrastructure, partnerships, and distribution network for successful Crypto mining.",
+    "Harnessing the power of artificial intelligence, Shard AI revolutionizes the cryptocurrency mining landscape by using AI to optimize mining operations for maximum efficiency and profitability.",
+  openGraph: {
+    title: "Shard AI",
+    description:
+      "Harnessing the power of artificial intelligence, Shard AI revolutionizes the cryptocurrency mining landscape by using AI to optimize mining operations for maximum efficiency and profitability.",
+    url: new URL("https://ai-gen-ten.vercel.app/"),
+  },
 };
 
 export default function RootLayout({ children }) {
