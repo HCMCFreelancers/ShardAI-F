@@ -3,6 +3,7 @@ import Image from "next/image";
 import aicpu from "@/images/redefine/cpu.png";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Redefine() {
   const [ref1, inView1] = useInView({
@@ -91,9 +92,12 @@ export default function Redefine() {
           {/* <button className="rounded-[52px] bg-[radial-gradient(302.61%_113.38%_at_-3%_21.87%,#FFF7E1_0%,#FFD361_14.73%,#EC6803_100%)] h-12 px-8 py-1.5 text-[#000] text-[18px] font-medium -tracking-[0.54px]">
             Launch Dapp
           </button> */}
-          <button className="transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#F3904F] hover:to-[#3B4371] hover:text-white rounded-[52px] bg-[radial-gradient(302.61%_113.38%_at_-3%_21.87%,#FFF7E1_0%,#FFD361_14.73%,#EC6803_100%)] h-12 px-8 py-1.5 text-[#000] text-[18px] font-medium -tracking-[0.54px]">
+          <Link
+            href={process.env.NEXT_PUBLIC_LINK_DAPP}
+            className="transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-[#F3904F] hover:to-[#3B4371] hover:text-white rounded-[52px] bg-[radial-gradient(302.61%_113.38%_at_-3%_21.87%,#FFF7E1_0%,#FFD361_14.73%,#EC6803_100%)] h-12 px-8 py-1.5 text-[#000] text-[18px] font-medium -tracking-[0.54px]"
+          >
             Launch Dapp
-          </button>
+          </Link>
         </motion.div>
       </div>
       {/* image reponsive mobile view */}

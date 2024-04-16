@@ -7,24 +7,29 @@ import tiktok from "@/images/contact/tiktok.png";
 import telegram from "@/images/contact/telegram.png";
 import dextools from "@/images/contact/dextools.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Contact = () => {
   const listSocial = [
     {
       icon: tiktok,
       id: 1,
+      href: String(process.env.NEXT_PUBLIC_LINK_TIKTOK),
     },
     {
       icon: telegram,
       id: 2,
+      href: String(process.env.NEXT_PUBLIC_LINK_TELEGRAM),
     },
     {
       icon: twitter,
       id: 3,
+      href: String(process.env.NEXT_PUBLIC_LINK_TWITTER),
     },
     {
       icon: dextools,
       id: 4,
+      href: String(process.env.NEXT_PUBLIC_LINK_DEXTOOLS),
     },
   ];
   const [ref1, inView1] = useInView({
@@ -56,12 +61,15 @@ const Contact = () => {
           <div className="flex justify-center w-full gap-[24px]">
             {listSocial.map((item, index) => {
               return (
-                <div
+                <Link
                   key={item.id}
-                  className="md:w-[56px] md:h-[56px] w-[40px] h-[40px] rounded-[40px] flex justify-center items-center border-[1px] border-solid border-[#E7E7E7] p-[4px] md:p-[8px]"
+                  href={item.href}
+                  className="md:w-[56px]
+                  hover:opacity-60 transition-all
+                  md:h-[56px] w-[40px] h-[40px] rounded-[40px] flex justify-center items-center border-[1px] border-solid border-[#E7E7E7] p-[4px] md:p-[8px]"
                 >
                   <Image src={item.icon} alt="icon" objectFit="cover" />
-                </div>
+                </Link>
               );
             })}
           </div>

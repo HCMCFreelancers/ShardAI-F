@@ -40,12 +40,12 @@ const Header = () => {
         )}
       >
         <div className={cn("flex items-center justify-between w-full h-[5px]")}>
-          <div className="flex items-center gap-4">
+          <Link href={"/"} className="flex items-center gap-4">
             <Logo />
             <h1 className="text-[28px] leading-[32px] font-medium text-white">
               Shard AI
             </h1>
-          </div>
+          </Link>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="px-[10px] flex md:hidden"
@@ -86,11 +86,14 @@ const Header = () => {
               </p>
             </Link>
           ))}
-          <button className="px-6 py-3 rounded-[60px] bg-[radial-gradient(302.61%_113.38%_at_-3%_21.87%,#FFF7E1_0%,#FFD361_14.73%,#EC6803_100%)] hover:opacity-80 transition-all">
+          <Link
+            href={process.env.NEXT_PUBLIC_LINK_DAPP}
+            className="px-6 py-3 rounded-[60px] bg-[radial-gradient(302.61%_113.38%_at_-3%_21.87%,#FFF7E1_0%,#FFD361_14.73%,#EC6803_100%)] hover:opacity-80 transition-all"
+          >
             <span className="text-[14px] whitespace-nowrap leading-[20px] text-[#000000] tracking-[-0.05px] font-medium ">
               Launch Dapp
             </span>
-          </button>
+          </Link>
         </div>
         {isMenuOpen && (
           <div className="md:hidden flex flex-col gap-8 w-full pt-8">

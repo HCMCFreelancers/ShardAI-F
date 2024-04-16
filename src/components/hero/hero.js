@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ContainerScroll } from "../ui/container-scroll-animation";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
 
@@ -44,11 +45,14 @@ const Hero = () => {
               profitability.
             </p>
           </div>
-          <button className="md:px-8 md:py-4 relative z-[200] hover:scale-105 py-2 px-6 w-fit bg-white rounded-[45px] shadow-[0px_4px_24px_0px_rgba(23,21,19,0.25)] hover:opacity-80 transition-all">
+          <Link
+            href={process.env.NEXT_PUBLIC_LINK_DAPP}
+            className="md:px-8 md:py-4 relative z-[200] hover:scale-105 py-2 px-6 w-fit bg-white rounded-[45px] shadow-[0px_4px_24px_0px_rgba(23,21,19,0.25)] hover:opacity-80 transition-all"
+          >
             <span className="text-[#1E1E1E] md:text-[16px] text-[14px] leading-[20px] tracking-[-0.05px] font-medium">
               Launch Dapp
             </span>
-          </button>
+          </Link>
         </motion.div>
         <motion.div
           ref={ref2}
