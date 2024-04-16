@@ -66,7 +66,7 @@ const Contact = () => {
             })}
           </div>
           <div className="text-[#676D79] md:text-[16px] text-[14px] font-normal leading-[20px] md:leading-[24px] py-[16px]">
-            © AI Gen 2024, All Rights Reserved.
+            © Shard AI 2024, All Rights Reserved.
           </div>
         </motion.div>
       </div>

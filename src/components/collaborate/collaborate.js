@@ -72,14 +72,15 @@ const Collaborate = () => {
           >
             <div className="w-full p-[24px] flex flex-col gap-[24px] items-center">
               <div className="text-[#fff] text-[20px] font-medium leading-[28px]">
-                Pioneering Cryptocurrency Mining Through AI Innovation
+                Auto Rebasing
               </div>
               <div className="text-[rgba(255,255,255,0.66)] text-[14px] font-light leading-[22px] tracking-[0.2px] flex flex-col items-center">
-                At the forefront of the cryptocurrency realm, AI-driven mining
-                facility signifies a groundbreaking shift. By combining
-                AI-optimized mining, sustainable practices, and community
-                involvement, AI Gen emerges as a trailblazer in innovation and
-                efficiency.
+                $cSHARD token is is natively rebasing on the Shard Chain: The
+                yield for $cSHARD comes from mining protocol. $cSHARD can be
+                redeemed for $cSHARD and stablecoin when bridging back to
+                Ethereum. Smart contracts can opt-in to this rebasing, making it
+                easy to existing Dapps to deploy on Shard Chain without any
+                changes.
                 <div className="w-[263px] h-[157px] relative">
                   <div className="w-[263px] h-[197px] absolute bottom-[-40px] left-0 ">
                     <Image
@@ -90,15 +91,6 @@ const Collaborate = () => {
                     />
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="w-full p-[24px] flex flex-col gap-[24px]">
-              <div className="text-[#fff] text-[20px] font-medium leading-[28px]">
-                Explore Limitless Mining Opportunities
-              </div>
-              <div className="text-[rgba(255,255,255,0.66)] text-[14px] font-light leading-[22px] tracking-[0.2px]">
-                Join us at AI Gen and discover how the fusion of AI and
-                cryptocurrency mining opens doors to endless possibilities.
               </div>
             </div>
           </motion.div>
