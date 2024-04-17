@@ -27,7 +27,10 @@ export default function Redefine() {
     rootMargin: "0px 0px -100px 0px",
   });
   return (
-    <div className="md:max-w-[1440px] max-w-[414px] w-full md:px-40 py-[60px] px-4 flex md:flex-row flex-col md:items-start items-center md:gap-[60px] h-[974px] md:h-auto">
+    <div
+      id="services"
+      className="md:max-w-[1440px] max-w-[414px] w-full md:px-40 py-[60px] px-4 flex md:flex-row flex-col md:items-start items-center md:gap-[60px] h-[974px] md:h-auto"
+    >
       {/* image desktop view */}
       <motion.div
         className="md:w-[530px] md:h-[605px] rounded-[24px] md:block hidden"

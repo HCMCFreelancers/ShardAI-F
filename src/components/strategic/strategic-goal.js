@@ -41,7 +41,10 @@ export default function StrategicGoal() {
     rootMargin: "0px 0px -100px 0px",
   });
   return (
-    <div className="md:max-w-[1440px] max-w-[414px] w-full px-4 py-[60px] md:px-40 flex flex-col items-center">
+    <div
+      id="features"
+      className="md:max-w-[1440px] max-w-[414px] w-full px-4 py-[60px] md:px-40 flex flex-col items-center"
+    >
       {/* title */}
       {/* <div className="px-4 py-2 rounded-[40px] border border-[rgba(255,255,255,0.75)] bg-[rgba(255,250,209,0.04)] shadow-[0px_0px_12px_0px_#FFC872_inset]">
         <p className="md:text-[18px] text-[12px] leading-[24px] bg-[linear-gradient(90deg,#FFFCF5_-0.05%,#E5B865_37.73%,#F27969_82.63%)] bg-clip-text text-transparent">

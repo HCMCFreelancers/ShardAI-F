@@ -39,16 +39,22 @@ const Contact = () => {
           { title: "Home", href: "/" },
           { title: "Our Services", href: "#services" },
           { title: "Features", href: "#features" },
-          { title: "Docs", href: "https://docs.taostack.network/" },
+          { title: "Docs", href: String(process.env.NEXT_PUBLIC_LINK_DOCS) },
         ],
       },
       {
         title: "Social Links",
         links: [
-          { title: "TG Bot", href: "https://t.me/TaoStack_Bot" },
-          { title: "Dapp", href: "https://dapp.taostack.network/" },
-          { title: "Twitter", href: "https://twitter.com/TaoStack" },
-          { title: "Telegram", href: "https://t.me/TaoStack" },
+          { title: "TG Bot", href: String(process.env.NEXT_PUBLIC_LINK_DAPP) },
+          { title: "Dapp", href: String(process.env.NEXT_PUBLIC_LINK_DAPP) },
+          {
+            title: "Twitter",
+            href: String(process.env.NEXT_PUBLIC_LINK_TWITTER),
+          },
+          {
+            title: "Telegram",
+            href: String(process.env.NEXT_PUBLIC_LINK_TELEGRAM),
+          },
         ],
       },
       {
@@ -56,14 +62,20 @@ const Contact = () => {
         links: [
           {
             title: "Etherscan",
-            href: "https://etherscan.io/token/0x6eef75b8f067b5853a36da5561f52a8f22faa9af",
+            href: String(process.env.NEXT_PUBLIC_LINK_ETHERSCAN),
           },
           {
             title: "Dextools",
-            href: "https://www.dextools.io/app/en/ether/pair-explorer/0xb3162f4792c5d78bfb1f61b2ef3b13f1de3dac76?t=1712082028871",
+            href: String(process.env.NEXT_PUBLIC_LINK_DEX),
           },
-          { title: "CoinmarketCap", href: "https://coinmarketcap.com/" },
-          { title: "Coingecko", href: "https://www.coingecko.com/" },
+          {
+            title: "CoinmarketCap",
+            href: String(process.env.NEXT_PUBLIC_LINK_COINMARKETCAP),
+          },
+          {
+            title: "Coingecko",
+            href: String(process.env.NEXT_PUBLIC_LINK_GECKO),
+          },
         ],
       },
     ];
