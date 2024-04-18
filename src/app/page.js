@@ -9,6 +9,7 @@ import Redefine from "@/components/redefine/redefine-efficiency";
 import StrategicGoal from "@/components/strategic/strategic-goal";
 
 export default function Home() {
+  
   return (
     <main
       style={{
