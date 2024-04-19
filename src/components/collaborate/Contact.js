@@ -3,82 +3,82 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import logo from "@/images/contact/logo.png";
 import twitter from "@/images/contact/twitter.png";
-import tiktok from "@/images/contact/tiktok.png";
 import telegram from "@/images/contact/telegram.png";
 import dextools from "@/images/contact/dextools.png";
 import Image from "next/image";
 import Link from "next/link";
+import docs from "@/images/footer/doc.png";
 
 const Contact = () => {
-   const social = [
-     {
-       icon: tiktok,
-       id: 1,
-       href: String(process.env.NEXT_PUBLIC_LINK_TIKTOK),
-     },
-     {
-       icon: telegram,
-       id: 2,
-       href: String(process.env.NEXT_PUBLIC_LINK_TELEGRAM),
-     },
-     {
-       icon: twitter,
-       id: 3,
-       href: String(process.env.NEXT_PUBLIC_LINK_TWITTER),
-     },
-     {
-       icon: dextools,
-       id: 4,
-       href: String(process.env.NEXT_PUBLIC_LINK_DEXTOOLS),
-     },
-   ];
-    const footerLinks = [
-      {
-        title: "Web Links",
-        links: [
-          { title: "Home", href: "/" },
-          { title: "Our Services", href: "#services" },
-          { title: "Features", href: "#features" },
-          { title: "Docs", href: String(process.env.NEXT_PUBLIC_LINK_DOCS) },
-        ],
-      },
-      {
-        title: "Social Links",
-        links: [
-          { title: "TG Bot", href: String(process.env.NEXT_PUBLIC_LINK_DAPP) },
-          { title: "Dapp", href: String(process.env.NEXT_PUBLIC_LINK_DAPP) },
-          {
-            title: "Twitter",
-            href: String(process.env.NEXT_PUBLIC_LINK_TWITTER),
-          },
-          {
-            title: "Telegram",
-            href: String(process.env.NEXT_PUBLIC_LINK_TELEGRAM),
-          },
-        ],
-      },
-      {
-        title: "Other Links",
-        links: [
-          {
-            title: "Etherscan",
-            href: String(process.env.NEXT_PUBLIC_LINK_ETHERSCAN),
-          },
-          {
-            title: "Dextools",
-            href: String(process.env.NEXT_PUBLIC_LINK_DEX),
-          },
-          {
-            title: "CoinmarketCap",
-            href: String(process.env.NEXT_PUBLIC_LINK_COINMARKETCAP),
-          },
-          {
-            title: "Coingecko",
-            href: String(process.env.NEXT_PUBLIC_LINK_GECKO),
-          },
-        ],
-      },
-    ];
+  const social = [
+    {
+      icon: docs,
+      id: 1,
+      href: String(process.env.NEXT_PUBLIC_LINK_DOCS),
+    },
+    {
+      icon: telegram,
+      id: 2,
+      href: String(process.env.NEXT_PUBLIC_LINK_TELEGRAM),
+    },
+    {
+      icon: twitter,
+      id: 3,
+      href: String(process.env.NEXT_PUBLIC_LINK_TWITTER),
+    },
+    {
+      icon: dextools,
+      id: 4,
+      href: String(process.env.NEXT_PUBLIC_LINK_DEXTOOLS),
+    },
+  ];
+  const footerLinks = [
+    {
+      title: "Web Links",
+      links: [
+        { title: "Home", href: "/" },
+        { title: "Our Services", href: "#services" },
+        { title: "Features", href: "#features" },
+        { title: "Docs", href: String(process.env.NEXT_PUBLIC_LINK_DOCS) },
+      ],
+    },
+    {
+      title: "Social Links",
+      links: [
+        { title: "TG Bot", href: String(process.env.NEXT_PUBLIC_LINK_DAPP) },
+        { title: "Dapp", href: String(process.env.NEXT_PUBLIC_LINK_DAPP) },
+        {
+          title: "Twitter",
+          href: String(process.env.NEXT_PUBLIC_LINK_TWITTER),
+        },
+        {
+          title: "Telegram",
+          href: String(process.env.NEXT_PUBLIC_LINK_TELEGRAM),
+        },
+      ],
+    },
+    {
+      title: "Other Links",
+      links: [
+        {
+          title: "Etherscan",
+          href: String(process.env.NEXT_PUBLIC_LINK_ETHERSCAN),
+        },
+        {
+          title: "Dextools",
+          href: String(process.env.NEXT_PUBLIC_LINK_DEX),
+        },
+        {
+          title: "CoinmarketCap",
+          href: String(process.env.NEXT_PUBLIC_LINK_COINMARKETCAP),
+        },
+        {
+          title: "Coingecko",
+          href: String(process.env.NEXT_PUBLIC_LINK_GECKO),
+        },
+      ],
+    },
+  ];
   const [ref1, inView1] = useInView({
     triggerOnce: true,
     rootMargin: "-100px 0px",
