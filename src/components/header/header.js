@@ -4,6 +4,9 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import Logo from "./logo";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
+import tele from "@/images/header/tele.svg";
+import twitter from "@/images/header/x.svg";
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -20,8 +23,6 @@ const Header = () => {
   ];
 
   const { innerWidth } = useWindowDimensions();
-
-
 
   useEffect(() => {
     if (innerWidth > 768) {
@@ -94,6 +95,12 @@ const Header = () => {
               Launch Dapp
             </span>
           </Link>
+          <Link className="size-6" href={process.env.NEXT_PUBLIC_LINK_TELEGRAM}>
+            <Image src={tele} alt="telegram" width={24} height={24} />
+          </Link>
+          <Link className="size-6" href={process.env.NEXT_PUBLIC_LINK_TWITTER}>
+            <Image src={twitter} alt="telegram" width={24} height={24} />
+          </Link>
         </div>
         {isMenuOpen && (
           <div className="md:hidden flex flex-col gap-8 w-full pt-8">
@@ -137,6 +144,9 @@ const Header = () => {
                 Launch Dapp
               </span>
             </button>
+            <div>
+              <Image src={tele} alt="telegram" width={24} height={24} />
+            </div>
           </div>
         )}
       </header>
